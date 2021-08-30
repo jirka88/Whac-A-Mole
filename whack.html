@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="whack.css">
+    <script src="whack.js"></script>
+    <title>Whack a mole</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="dat">
+            <h1>Whac-A-Mole</h1>
+            <p><a href="#" onclick="start();return false;">Start</a></p>
+            <div class="Game-Data">
+                <p class="Data">Skore: </p>
+                <p class="cas"> zbývající čas: </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="dirt">
+                <div class="mole">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let dirt = document.querySelector(".dirt");
+    let box = document.querySelector(".box");
+    let mole = document.querySelector(".mole");
+
+    for (let index = 1; index < 8; index++) {
+        var cln = dirt.cloneNode(true);
+        cln.id = index;
+        box.appendChild(cln);
+
+    }
+
+    document.querySelectorAll(".mole").forEach(item => {
+        item.addEventListener("click", event => {
+            item.style.display = "none";
+            document.querySelector(".Data").innerHTML = "Skore: " + Skore++;
+        })
+    })
+
+</script>
+
+</html>
