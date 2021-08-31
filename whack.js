@@ -5,6 +5,7 @@ var cass;
 let Mole;
 let prvniMole = -1;
 let startt = false;
+var test;
 function start() {
     if (!startt) {
         cass = setInterval(cas, 1000)
@@ -24,7 +25,8 @@ function cas() {
         Mole.style.display = "block";
         Mole.style.animation = "pohyb 0.4s 1"
         Mole.style.top = "-70%";
-        setTimeout(zmiz, 650);      //po časovém intervalu zmizí 
+        setTimeout(zmiz, test = Math.floor(Math.random() * (550 - 350 + 1) + 350));      //po časovém intervalu zmizí 
+        console.log(test);
     }
 
 

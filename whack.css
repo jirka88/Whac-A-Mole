@@ -74,6 +74,26 @@ a:hover {
     color:white;
     font-size: 24px;
 }
+.footer {
+    position: relative;
+    height: 88px;
+    width: 100%;
+    background: black;
+  }
+  
+  .footer .copy {
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+
 @keyframes pohyb {
     0% {
         top: -20%;
