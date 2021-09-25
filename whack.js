@@ -1,14 +1,15 @@
 let count = 30;
 let Skore = 1;
 let nahoda = 0;
-var cass;
+var Timer;
 let Mole;
 let prvniMole = -1;
 let startt = false;
 var test;
 function start() {
     if (!startt) {
-        cass = setInterval(cas, 1000)
+        Timer = setInterval(cas, 1000)
+        startt = true;
     }
 
 }
@@ -17,7 +18,7 @@ function cas() {
     count--;
     document.querySelector(".cas").innerHTML = "Zbývajicí čas: " + count;
     if (count === 0) {
-        clearInterval(cass);
+        clearInterval(Timer);
         clear();
     }
     else {
@@ -25,8 +26,7 @@ function cas() {
         Mole.style.display = "block";
         Mole.style.animation = "pohyb 0.4s 1"
         Mole.style.top = "-70%";
-        setTimeout(zmiz, test = Math.floor(Math.random() * (550 - 350 + 1) + 350));      //po časovém intervalu zmizí 
-        console.log(test);
+        setTimeout(zmiz, test = Math.floor(Math.random() * (600 - 350 + 1) + 350));      //po časovém intervalu zmizí 
     }
 
 
