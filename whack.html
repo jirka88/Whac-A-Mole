@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Jiří Navrátil">
+    <meta name="keywords" content="Whac-A-Mole, Whack, Mole, Game, Hra, Projekt, mini-projekt, Krtek">
+    <meta name="theme-color" content="#050b26" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="whack.css">
+    <link rel="icon" href="mole.png">
     <script src="whack.js"></script>
     <title>Whack a mole</title>
 </head>
@@ -49,10 +53,11 @@
         box.appendChild(cln);
 
     }
-
+    var audio = new Audio("punch.mp3");
     document.querySelectorAll(".mole").forEach(item => {
         item.addEventListener("click", event => {
             item.style.display = "none";
+            audio.play();
             document.querySelector(".Data").innerHTML = "Skore: " + Skore++;
         })
     })

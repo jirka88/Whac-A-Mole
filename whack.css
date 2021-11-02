@@ -60,7 +60,7 @@ a:hover {
     height: 130%;
     background: url("mole.png") center no-repeat;
     background-size: 60%;
-    cursor: pointer;
+    cursor:url("hammer.png"), auto;
     display:none; 
  
 }
@@ -269,7 +269,7 @@ a:hover {
 .box {
     position: absolute;
     left:50%;
-    top: 75%;
+    top: 80%;
 }
 
 .dirt {
